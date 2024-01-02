@@ -10,12 +10,33 @@
     <h1>Hello World!</h1>
     <p>{{ n }}</p>
     <p>{{fg }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <h3>동물 병원</h3>
+
+        <p>나이: </p>
+        <input type="number" name="age">
+        <br>
+
+        <p>색깔: </p>
+        <input type="text" name="color">
+        <br>
+
+        <p>성별: </p>
+        <input type="radio" name="gender" value="man" id="gender_man">
+        <label for="gender_man">수컷</label>
+        <input type="radio" name="gender" value="woman" id="gender_woman">
+        <label for="gender_woman">암컷</label>
+
+        <input type="submit" class="w-btn w-btn-indigo">
+    </form>
     <button class="w-btn w-btn-indigo" type="button">
         BUTTON
     </button>
     <button class="w-btn w-btn-green" type="button">
         BUTTON
     </button>
+    <a href="/lee">asdfghjkl</a>
     <style>
     h1 {
       color: blue;
