@@ -1,7 +1,11 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 
 
 def hello(request):
-    return 'myapp/hello.html'
+    return render(request, 'myapp/hello.html', {
+        'n': 100,
+        'fg': "ghj"
+    })
